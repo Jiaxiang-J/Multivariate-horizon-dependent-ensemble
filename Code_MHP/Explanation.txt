@@ -1,3 +1,7 @@
+First, in terms of the dependencies.
+Python 3.11.0 with Numpy (1.26.4), Pandas (2.2.3), SciPy (1.15.2), Scikit-learn (1.6.1), Statsmodels (0.14.1), Seaborn (0.13.2)
+MATLAB R2023b with Optimization Toolbox (23.2), Statistical and Machine Learning Toolbox (23.2).
+
 For base model training, use the file "AIRU_WRF_R1.lt.m" and "AIRU_WRF_R1.m" for LTM and STM, respectively. Both base model take "data_test_hour.m" as input. Note that, the function "oneRollPredictFore_r1.m" used should also be added to the path.
 
 For multivariate horizon-dependent probabilistic ensemble, use the file "ens_es_train.ipynb", it load the output from the previous step (LTM/STM output), and output the ensemble forecast.
