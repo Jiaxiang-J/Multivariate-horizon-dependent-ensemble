@@ -1,0 +1,19 @@
+For base model training, use the file "AIRU_WRF_R1.lt.m" and "AIRU_WRF_R1.m" for LTM and STM, respectively. Both base model take "data_test_hour.m" as input. Note that, the function "oneRollPredictFore_r1.m" used should also be added to the path.
+
+For multivariate horizon-dependent probabilistic ensemble, use the file "ens_es_train.ipynb", it load the output from the previous step (LTM/STM output), and output the ensemble forecast.
+
+For other results that shown in the paper:
+
+Figure 1: 1a is produced using "ts_for_roll_with_PI.m", 1b is produced using "ts_for_roll_with_PI_R1.m". Note that, the input required by the codes should be added to the path.
+Table 1: 'table1.m' produceds the RMSE for each method, and "dm.m" produces the Diebold Mariano test p values for each method. Note that the function used in each script should be added to the path, and slightly change the variable name in the script to reflect result for different methods.
+Table 2: 'get_crps.m' generates the CRPS for each method. Note that the function used in each script should be added to the path, and slightly change the variable name in the script to reflect result for different methods.
+Figure 2 and 4: 'ts_plot.m' takes the ensemble output as input to generate the probabilistic forecast time series. Note that, this is the same script to generate the NWP vs. Ground truth figure, just load the output from base model, and allY_Test correspond to the ground truth, allY_NWP corresponde to the NWP. The dimension is hour * location * roll.
+Figure 5: The scenario of each method are generated through 'performance_check.ipynb'.
+Figure 6: The spatial map is generated using 'spatial_figure.m', just change the index for date or hour to reflect a different map. The time series plot at ASOW-6 is generated using 'asow_fig.ipynb'
+Table 3: First, transform the wind speed to wind power based on the power curve. Then use 'pce_new.m' to generate the PCE values, note that the values should divide 15 to reflect the number in the paper.
+
+For ablation experiment, it's similar to what we did in the main manuscript
+Table 4, 7: load different data file and get the CRPS.
+Table 5: use 'performance_check.ipynb' to get the CRPS at different regime. Note that you may change the hour (1-6,7-24,1-24) and regime (both good/mix/both bad) to get the final results.
+Table 6: Ensemble using other base models, here we use PER and NWP as input. The result are produced by 'ensemble_other_basemodel.m'
+Figure 9: When running the base model, save the training residual for analysis, and use 'residual_analysis.ipynb' to generate the time series and histogram for the residual before/after GP.
