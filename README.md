@@ -19,6 +19,6 @@ This work builds upon the AIRU-WRF framework for physics-guided offshore wind fo
 
 The experiments were implemented using Python 3.11.0 and MATLAB R2023b (Version 23.2.0.2428915). 
 
-After cloning this repository, please refer to Code_MHP/Explaination.text for instructions on using the provided data and code to train the models and generate the results presented in the paper.
+After cloning this repository, please refer to Code_MHP/Explanation.text for instructions on using the provided data and code to train the models and generate the results presented in the paper.
 
 This work is part of the RIA Research Group, check other projects by [RIA-Research-Group](https://github.com/RIA-Research-Group).
